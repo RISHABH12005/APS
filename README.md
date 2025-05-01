@@ -1,2 +1,2 @@
-# DSA
-Data Structures &amp; Algorithms
+# APS
+Algorithmic Problem Solving 
