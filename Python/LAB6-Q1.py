@@ -1,26 +1,26 @@
-class Job:
-    def __init__(self, job_id, deadline, profit):
-        self.job_id = job_id
-        self.deadline = deadline
-        self.profit = profit
-def sequenc(jobs):
-    jobs.sort(key=lambda job: job.profit, reverse=True)
-    max_deadline = max(job.deadline for job in jobs)
-    slots = [None] * max_deadline
-    total_profit = 0
-    for job in jobs:
-        for slot in range(min(job.deadline, max_deadline) - 1, -1, -1):
-            if slots[slot] is None:
-                slots[slot] = job.job_id
-                total_profit += job.profit
+class J:
+    def __init__(self, jid, dl, p):
+        self.jid = jid
+        self.dl = dl
+        self.p = p
+def sq(js):
+    js.sort(key=lambda j: j.p, reverse=True)
+    mdl = max(j.dl for j in js)
+    ss = [None] * mdl
+    tp = 0
+    for j in js:
+        for s in range(min(j.dl, mdl) - 1, -1, -1):
+            if ss[s] is None:
+                ss[s] = j.jid
+                tp += j.p
                 break
-    print("Scheduled Jobs:", slots)
-    print("Total Profit:", total_profit)
-example_jobs = [
-    Job('J1', 2, 60),
-    Job('J2', 1, 100),
-    Job('J3', 3, 20),
-    Job('J4', 2, 40),
-    Job('J5', 1, 20),
+    print("Scheduled Jobs:", ss)
+    print("Total Profit:", tp)
+ej = [
+    J('J1', 2, 60),
+    J('J2', 1, 100),
+    J('J3', 3, 20),
+    J('J4', 2, 40),
+    J('J5', 1, 20),
 ]
-sequenc(example_jobs)
+sq(ej)
