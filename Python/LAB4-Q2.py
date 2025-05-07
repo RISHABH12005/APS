@@ -1,4 +1,4 @@
-def minpair(S):
+def mp(S):
     S.sort()
     d = float('inf')
     p = (None, None)
@@ -9,5 +9,5 @@ def minpair(S):
             p = (S[i], S[i + 1])
     return p
 S = [4, 15, 8, 1, 19, 0, 12]
-r = minpair(S)
-print(f"The pair with the minimum difference is: {r}")
+r = mp(S)
+print(f"The pair with the min diff. is: {r}")
