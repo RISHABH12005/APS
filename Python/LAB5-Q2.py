@@ -1,4 +1,4 @@
-def counting(A, k):
+def c(A, k):
     n = len(A)
     B = [0] * n
     C = [0] * (k + 1)
@@ -12,5 +12,5 @@ def counting(A, k):
     return B
 A = [21, 51, 31, 1, 22, 32, 2, 33]
 k = max(A)
-s = counting(A, k)
+s = c(A, k)
 print("Counting Sort:", s)
