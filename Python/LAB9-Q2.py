@@ -28,7 +28,7 @@ def k(g):
             un(p, r, u, v)
             print(f"Edge ({u+1},{v+1}) = {c}")
             mc += c
-    print("Minimum cost =", mc)
+    print("Min cost =", mc)
 g = [
     [0, 20, 2, 999],
     [20, 0, 15, 5],
