@@ -1,23 +1,23 @@
-def insertion(bucket):
-    for i in range(1, len(bucket)):
-        key = bucket[i]
+def isn(b):
+    for i in range(1, len(b)):
+        k = b[i]
         j = i - 1
-        while j >= 0 and key < bucket[j]:
-            bucket[j + 1] = bucket[j]
+        while j >= 0 and k < b[j]:
+            b[j + 1] = b[j]
             j -= 1
-        bucket[j + 1] = key
-def bucket(A):
+        b[j + 1] = k
+def b(A):
     n = len(A)
     B = [[] for _ in range(n)]
     for i in range(n):
-        index = int(n * A[i])
-        B[index].append(A[i])
+        ix = int(n * A[i])
+        B[ix].append(A[i])
     for i in range(n):
-        insertion(B[i])
-    result = []
+        isn(B[i])
+    r = []
     for i in range(n):
-        result.extend(B[i])
-    return result
+        r.extend(B[i])
+    return r
 A = [0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68]
-arr = bucket(A)
-print("Sorted array:", arr)
+a = b(A)
+print("Sorted array:", a)
