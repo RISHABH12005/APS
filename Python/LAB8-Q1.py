@@ -12,4 +12,4 @@ n = len(A)
 k = max(A)
 B = [0] * n
 c(A, B, n, k)
-print("Sorted array:", B)
+print("Sorted arr:", B)
