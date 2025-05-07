@@ -1,4 +1,4 @@
-def pairsum(A1, A2, x):
+def ps(A1, A2, x):
     m = {}
     for i, v in enumerate(A1):
         m[v] = i
@@ -11,6 +11,6 @@ def pairsum(A1, A2, x):
 A1 = [4, 5, 8, 1, 3, 9, 0, 2]
 A2 = [2, 3, 35, 32, 12, 9, 2]
 x = 41
-pairsum(A1, A2, x)
+ps(A1, A2, x)
 x = 25
-pairsum(A1, A2, x)
+ps(A1, A2, x)
